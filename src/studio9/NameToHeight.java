@@ -20,8 +20,23 @@ public class NameToHeight {
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
 
-		// FIXME
-		throw new NotYetImplementedException();
+		Map<String, Integer> nameToHeight = new HashMap<>();
+		System.out.println("Initial map: " + nameToHeight);
+		nameToHeight.put("David", 64);
+		String name = "";
+		int height = 0;
+		while(!name.equals("Quit")) {
+			System.out.println("Name and Height: ");
+			name = in.next();
+			if(!name.equals("Quit")) {
+				height = in.nextInt();
+				nameToHeight.put(name, height);
+			}
+			
+		}
+		System.out.println("New Map: " + nameToHeight);
+		System.out.println("David's Height (in): " + nameToHeight.get("David"));
+		
 
 	}
 }
